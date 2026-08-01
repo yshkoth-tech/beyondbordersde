@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Germany Career Academy — From India to a Career in Germany</title>
+<meta name="description" content="Germany Career Academy guides Indian students through every stage of studying, relocating, and building a career in Germany — from university selection to full-time employment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --ink:#0F1B2D;
+  --paper:#FAF8F3;
+  --paper-dim:#F1ECE0;
+  --brass:#C6963B;
+  --brass-dark:#A87B2A;
+  --steel:#3D5A73;
+  --steel-light:#7C93A6;
+  --text-dark:#16212F;
+  --text-muted:#57616D;
+  --text-light:#F3EFE4;
+  --line:rgba(15,27,45,0.14);
+  --line-light:rgba(243,239,228,0.22);
+  --radius:2px;
+  --maxw:1180px;
+  --shadow:0 18px 40px -20px rgba(15,27,45,0.35);
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} *{animation:none !important; transition:none !important;} }
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--text-dark);
+  font-family:'Inter',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  margin:0;
+  color:var(--ink);
+  letter-spacing:-0.01em;
+}
+
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12.5px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--brass-dark);
+  font-weight:600;
+}
+.on-dark .eyebrow{ color:var(--brass); }
+
+p{ margin:0; }
+a{ color:inherit; text-decoration:none; }
+ul{ margin:0; padding:0; list-style:none; }
+img{ max-width:100%; display:block; }
+
+.wrap{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 32px;
+}
+@media (max-width:640px){ .wrap{ padding:0 20px; } }
+
+section{ position:relative; }
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:13px;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  font-weight:600;
+  padding:15px 26px;
+  border-radius:var(--radius);
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:transform .25s ease, background .25s ease, border-color .25s ease, color .25s ease;
+  white-space:nowrap;
+}
+.btn:hover{ transform:translateY(-2px); }
+.btn-primary{
+  background:var(--brass);
+  color:var(--ink);
+  border-color:var(--brass);
+}
+.btn-primary:hover{ background:var(--brass-dark); border-color:var(--brass-dark); }
+.btn-outline{
+  background:transparent;
+  color:var(--text-light);
+  border-color:var(--line-light);
+}
+.btn-outline:hover{ border-color:var(--brass); color:var(--brass); }
+.btn-outline-dark{
+  background:transparent;
+  color:var(--ink);
+  border-color:var(--line);
+}
+.btn-outline-dark:hover{ border-color:var(--ink); }
+.btn-arrow{ transition:transform .25s ease; }
+.btn:hover .btn-arrow{ transform:translateX(4px); }
+
+/* ============ NAV ============ */
+.nav{
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:100;
+  background:rgba(15,27,45,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line-light);
+}
+.nav-inner{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:16px 32px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:17px;
+  color:var(--text-light);
+}
+.brand .mark{ width:30px; height:30px; flex-shrink:0; }
+.brand small{
+  display:block;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9.5px;
+  letter-spacing:0.12em;
+  color:var(--steel-light);
+  font-weight:500;
+  text-transform:uppercase;
+  margin-top:1px;
+}
+.nav-links{
+  display:flex;
+  gap:26px;
+  font-size:13.5px;
+  font-weight:500;
+  color:var(--text-light);
+}
+.nav-links a{ opacity:0.78; transition:opacity .2s ease; padding:4px 0; }
+.nav-links a:hover{ opacity:1; }
+.nav-cta{ display:flex; align-items:center; gap:14px; }
+.nav-toggle{ display:none; background:none; border:none; color:var(--text-light); font-size:22px; cursor:pointer; }
+
+@media (max-width:900px){
+  .nav-links{ display:none; }
+  .nav-toggle{ display:block; }
+  .nav-cta .btn-outline{ display:none; }
+}
+
+/* ============ STAMP MARK (signature element) ============ */
+.stamp{
+  --stamp-color: var(--brass);
+  animation:spin 40s linear infinite;
+}
+@keyframes spin{ from{ transform:rotate(0deg);} to{ transform:rotate(360deg);} }
+.stamp circle.ring{ fill:none; stroke:var(--stamp-color); stroke-width:1.4; }
+.stamp text{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:7.4px;
+  letter-spacing:2.4px;
+  fill:var(--stamp-color);
+}
+.stamp .center-mark{ fill:var(--stamp-color); }
+
+/* ============ HERO ============ */
+.hero{
+  background:
+    radial-gradient(ellipse at 82% 12%, rgba(198,150,58,0.16), transparent 55%),
+    linear-gradient(180deg, var(--ink) 0%, #0C1622 100%);
+  color:var(--text-light);
+  padding:168px 0 120px;
+  overflow:hidden;
+  border-bottom:1px solid var(--line-light);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr 0.85fr;
+  gap:56px;
+  align-items:center;
+}
+@media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; } }
+
+.hero h1{
+  color:var(--text-light);
+  font-size:clamp(34px, 5vw, 58px);
+  line-height:1.08;
+  margin-top:18px;
+  max-width:14ch;
+}
+.hero h1 em{
+  font-style:italic;
+  color:var(--brass);
+}
+.hero-sub{
+  margin-top:24px;
+  font-size:17.5px;
+  line-height:1.65;
+  color:#C9D2DA;
+  max-width:52ch;
+}
+.hero-ctas{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:36px;
+}
+.hero-trust{
+  margin-top:52px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 28px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  color:var(--steel-light);
+  letter-spacing:0.02em;
+}
+.hero-trust span::before{ content:"— "; color:var(--brass); }
+
+.hero-stampbox{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.hero-doc{
+  position:relative;
+  width:100%;
+  max-width:340px;
+  border:1px solid var(--line-light);
+  background:rgba(243,239,228,0.03);
+  padding:30px 26px;
+  border-radius:2px;
+}
+.hero-doc .field{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--steel-light);
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  display:flex;
+  justify-content:space-between;
+  padding:11px 0;
+  border-bottom:1px dashed var(--line-light);
+}
+.hero-doc .field b{
+  color:var(--text-light);
+  font-weight:500;
+  text-transform:none;
+  letter-spacing:0;
+}
+.hero-doc .field:last-of-type{ border-bottom:none; }
+.hero-doc .stamp-wrap{
+  position:absolute;
+  bottom:-26px;
+  right:-22px;
+}
+
+/* ============ SECTION HEADERS ============ */
+.sec-head{
+  max-width:640px;
+  margin-bottom:56px;
+}
+.sec-head .eyebrow{ display:block; margin-bottom:14px; }
+.sec-head h2{
+  font-size:clamp(28px,3.6vw,42px);
+  line-height:1.14;
+}
+.sec-head p{
+  margin-top:16px;
+  font-size:16.5px;
+  color:var(--text-muted);
+  line-height:1.65;
+}
+.sec-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+
+.section-pad{ padding:110px 0; }
+@media (max-width:640px){ .section-pad{ padding:74px 0; } }
+
+.on-dark{ background:var(--ink); color:var(--text-light); }
+.on-dark h2, .on-dark h3, .on-dark h4{ color:var(--text-light); }
+.on-dim{ background:var(--paper-dim); }
+
+/* ============ REVEAL ============ */
+.reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.in{ opacity:1; transform:translateY(0); }
+
+/* ============ PROBLEM SECTION ============ */
+.problem-grid{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:64px;
+  align-items:start;
+}
+@media (max-width:840px){ .problem-grid{ grid-template-columns:1fr; gap:36px;} }
+.problem-quote{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:clamp(22px,2.6vw,30px);
+  line-height:1.35;
+  color:var(--ink);
+  border-left:2px solid var(--brass);
+  padding-left:24px;
+}
+.problem-body p{ font-size:16px; color:var(--text-muted); margin-bottom:16px; }
+.problem-body p:last-child{ margin-bottom:0; }
+.problem-body strong{ color:var(--ink); font-weight:600; }
+
+/* ============ WHY US CARDS ============ */
+.card-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+@media (max-width:840px){ .card-row{ grid-template-columns:1fr; } }
+.why-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:34px 28px;
+  border-radius:var(--radius);
+  transition:border-color .25s ease, transform .25s ease;
+}
+.why-card:hover{ border-color:var(--brass); transform:translateY(-4px); }
+.why-card .num{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  color:var(--brass-dark);
+  letter-spacing:0.1em;
+}
+.why-card h3{ font-size:19px; margin-top:14px; margin-bottom:10px; }
+.why-card p{ font-size:14.8px; color:var(--text-muted); line-height:1.6; }
+
+/* ============ STAGE TIMELINE ============ */
+.timeline{
+  position:relative;
+  margin-top:8px;
+}
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:29px;
+  top:8px;
+  bottom:8px;
+  width:1px;
+  background:repeating-linear-gradient(to bottom, var(--line) 0 6px, transparent 6px 12px);
+}
+.on-dark .timeline::before{ background:repeating-linear-gradient(to bottom, var(--line-light) 0 6px, transparent 6px 12px); }
+
+.stage{
+  position:relative;
+  display:grid;
+  grid-template-columns:60px 1fr;
+  gap:22px;
+  padding:26px 0;
+  border-bottom:1px solid var(--line);
+}
+.on-dark .stage{ border-bottom:1px solid var(--line-light); }
+.stage:last-child{ border-bottom:none; }
+.stage-num{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:14px;
+  font-weight:600;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:1px solid var(--brass);
+  color:var(--brass-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--paper);
+  z-index:1;
+}
+.on-dark .stage-num{ background:var(--ink); color:var(--brass); }
+.stage-content h3{ font-size:20px; margin-bottom:8px; }
+.stage-content .stage-list{ display:flex; flex-wrap:wrap; gap:8px 10px; margin-top:12px; }
+.stage-content .stage-list li{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11.5px;
+  color:var(--steel);
+  border:1px solid var(--line);
+  padding:5px 10px;
+  border-radius:20px;
+}
+.on-dark .stage-content .stage-list li{ color:var(--steel-light); border-color:var(--line-light); }
+.stage-content p.desc{ color:var(--text-muted); font-size:15px; margin-top:4px; }
+.on-dark .stage-content p.desc{ color:#B7C0C8; }
+
+/* ============ SERVICES GRID ============ */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+@media (max-width:900px){ .services-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:600px){ .services-grid{ grid-template-columns:1fr; } }
+.service-card{
+  background:var(--paper);
+  padding:32px 26px;
+  position:relative;
+  transition:background .25s ease;
+}
+.service-card:hover{ background:var(--paper-dim); }
+.service-card .tag{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--brass-dark);
+}
+.service-card h3{ font-size:18.5px; margin-top:12px; margin-bottom:10px; line-height:1.3; }
+.service-card p{ font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px; }
+.service-card ul{ margin-bottom:14px; }
+.service-card ul li{
+  font-size:13.5px;
+  color:var(--text-dark);
+  padding-left:14px;
+  position:relative;
+  margin-bottom:6px;
+}
+.service-card ul li::before{
+  content:"";
+  position:absolute;
+  left:0; top:8px;
+  width:6px; height:1px;
+  background:var(--brass);
+}
+.service-card .best-for{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11.5px;
+  color:var(--steel);
+  border-top:1px dashed var(--line);
+  padding-top:12px;
+}
+
+/* ============ WHY GERMANY ============ */
+.wg-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+@media (max-width:760px){ .wg-grid{ grid-template-columns:1fr; } }
+.wg-item{
+  padding:24px 26px;
+  border:1px solid var(--line);
+  background:var(--paper);
+}
+.wg-item h4{ font-size:16.5px; margin-bottom:8px; }
+.wg-item p{ font-size:14.5px; color:var(--text-muted); line-height:1.6; }
+
+.honest-box{
+  margin-top:60px;
+  border:1px dashed var(--brass-dark);
+  background:var(--paper-dim);
+  padding:38px 34px;
+}
+.honest-box h3{ font-size:22px; margin-bottom:18px; }
+.honest-box ul li{
+  font-size:15px;
+  color:var(--text-dark);
+  padding:10px 0 10px 22px;
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+.honest-box ul li:last-of-type{ border-bottom:none; }
+.honest-box ul li::before{
+  content:"▸";
+  position:absolute;
+  left:0;
+  color:var(--brass-dark);
+}
+.honest-box .note{
+  margin-top:20px;
+  font-style:italic;
+  font-family:'Fraunces',serif;
+  color:var(--steel);
+  font-size:15.5px;
+}
+
+/* ============ FOUNDER ============ */
+.founder-grid{
+  display:grid;
+  grid-template-columns:0.85fr 1.15fr;
+  gap:60px;
+  align-items:start;
+}
+@media (max-width:860px){ .founder-grid{ grid-template-columns:1fr; } }
+.founder-photo{
+  aspect-ratio:4/5;
+  background:linear-gradient(160deg, var(--steel) 0%, var(--ink) 100%);
+  border:1px solid var(--line-light);
+  display:flex;
+  align-items:flex-end;
+  padding:22px;
+  position:relative;
+}
+.founder-photo .cap{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--text-light);
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  opacity:0.75;
+}
+.founder-photo .stamp-wrap{ position:absolute; top:18px; right:18px; }
+.founder-body p{ font-size:16px; color:var(--text-muted); margin-bottom:18px; line-height:1.7; }
+.founder-body p:last-child{ margin-bottom:0; }
+.founder-body blockquote{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:20px;
+  color:var(--ink);
+  border-left:2px solid var(--brass);
+  padding-left:22px;
+  margin:26px 0;
+}
+.credentials{
+  margin-top:44px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px 24px;
+}
+@media (max-width:560px){ .credentials{ grid-template-columns:1fr; } }
+.credentials li{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:13px;
+  color:var(--text-dark);
+  padding:14px 16px;
+  border:1px solid var(--line);
+  background:var(--paper);
+}
+.philosophy-row{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+}
+@media (max-width:800px){ .philosophy-row{ grid-template-columns:1fr; } }
+.philosophy-row .p-item h4{ font-size:16.5px; margin-bottom:8px; }
+.philosophy-row .p-item p{ font-size:14.5px; color:var(--text-muted); line-height:1.6; }
+
+/* ============ FAQ ============ */
+.faq-list{ border-top:1px solid var(--line); }
+.faq-item{ border-bottom:1px solid var(--line); }
+.faq-item summary{
+  cursor:pointer;
+  list-style:none;
+  padding:24px 4px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  font-family:'Fraunces',serif;
+  font-size:17.5px;
+  color:var(--ink);
+  font-weight:500;
+}
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-item summary .q-num{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  color:var(--brass-dark);
+  margin-right:14px;
+}
+.faq-item summary .plus{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:20px;
+  color:var(--brass-dark);
+  flex-shrink:0;
+  transition:transform .25s ease;
+}
+.faq-item[open] summary .plus{ transform:rotate(45deg); }
+.faq-item .a{
+  padding:0 4px 26px 40px;
+  font-size:15.3px;
+  color:var(--text-muted);
+  line-height:1.7;
+  max-width:70ch;
+}
+
+/* ============ TESTIMONIALS ============ */
+.testi-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+@media (max-width:940px){ .testi-grid{ grid-template-columns:repeat(2,1fr);} }
+@media (max-width:640px){ .testi-grid{ grid-template-columns:1fr;} }
+.testi-card{
+  background:var(--ink);
+  color:var(--text-light);
+  padding:30px 26px;
+  position:relative;
+  border:1px solid var(--line-light);
+}
+.testi-card .verified{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--brass);
+  border:1px solid var(--brass-dark);
+  padding:4px 9px;
+  margin-bottom:18px;
+}
+.testi-card p.quote{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:16px;
+  line-height:1.6;
+  color:#EDE8DA;
+  margin-bottom:22px;
+}
+.testi-card .who{ font-size:13.5px; font-weight:600; color:var(--text-light); }
+.testi-card .prog{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--steel-light); margin-top:4px; }
+
+.stats-bar{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+@media (max-width:700px){ .stats-bar{ grid-template-columns:repeat(2,1fr);} }
+.stat{
+  padding:28px 20px;
+  text-align:center;
+  border-right:1px solid var(--line);
+}
+.stat:last-child{ border-right:none; }
+.stat .n{ font-family:'Fraunces',serif; font-size:34px; color:var(--ink); }
+.stat .l{ font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:6px; }
+
+/* ============ CONTACT / BOOK — FORMS ============ */
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+@media (max-width:860px){ .form-grid{ grid-template-columns:1fr; gap:36px; } }
+.doc-form{
+  border:1px solid var(--line-light);
+  background:rgba(243,239,228,0.03);
+  padding:34px;
+}
+.doc-form .eyebrow{ margin-bottom:22px; display:block; }
+.field-group{ margin-bottom:20px; }
+.field-group label{
+  display:block;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--steel-light);
+  margin-bottom:8px;
+}
+.field-group input, .field-group select, .field-group textarea{
+  width:100%;
+  background:transparent;
+  border:none;
+  border-bottom:1px solid var(--line-light);
+  color:var(--text-light);
+  font-family:'Inter',sans-serif;
+  font-size:15px;
+  padding:10px 2px;
+  outline:none;
+  transition:border-color .2s ease;
+}
+.field-group select option{ background:var(--ink); color:var(--text-light); }
+.field-group input:focus, .field-group select:focus, .field-group textarea:focus{ border-bottom-color:var(--brass); }
+.field-group textarea{ resize:vertical; min-height:80px; }
+.doc-form .btn{ margin-top:8px; width:100%; justify-content:center; }
+
+.contact-side h3{ font-size:22px; margin-bottom:20px; }
+.contact-side .row{
+  display:flex;
+  gap:14px;
+  padding:16px 0;
+  border-bottom:1px solid var(--line);
+}
+.contact-side .row .k{ font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--brass-dark); text-transform:uppercase; letter-spacing:0.06em; width:110px; flex-shrink:0; padding-top:2px; }
+.contact-side .row .v{ font-size:15px; color:var(--text-dark); }
+.contact-side .row .v a:hover{ color:var(--brass-dark); }
+
+/* ============ BOOK SESSION CARDS ============ */
+.session-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
+  margin-bottom:56px;
+}
+@media (max-width:760px){ .session-grid{ grid-template-columns:1fr; } }
+.session-card{
+  border:1px solid var(--line);
+  padding:34px 30px;
+  background:var(--paper);
+}
+.session-card.featured{ border-color:var(--brass-dark); background:var(--paper-dim); }
+.session-card .tag2{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--brass-dark);
+}
+.session-card h3{ font-size:21px; margin:14px 0 8px; }
+.session-card .price{ font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--steel); margin-bottom:16px; }
+.session-card p{ font-size:14.5px; color:var(--text-muted); line-height:1.6; margin-bottom:22px; }
+.checklist{ margin-top:40px; }
+.checklist h4{ font-size:18px; margin-bottom:18px; }
+.checklist ul li{
+  font-size:15px;
+  padding:9px 0 9px 26px;
+  position:relative;
+  color:var(--text-dark);
+}
+.checklist ul li::before{ content:"✔"; position:absolute; left:0; color:var(--brass-dark); font-size:13px; }
+
+/* ============ FINAL CTA ============ */
+.final-cta{
+  background:var(--ink);
+  color:var(--text-light);
+  padding:100px 0;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.final-cta::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse at 50% 0%, rgba(198,150,58,0.14), transparent 60%);
+}
+.final-cta h2{
+  color:var(--text-light);
+  font-size:clamp(28px,4vw,44px);
+  max-width:16ch;
+  margin:0 auto;
+  line-height:1.15;
+  position:relative;
+}
+.final-cta p{
+  margin-top:18px;
+  color:#C9D2DA;
+  font-size:16.5px;
+  max-width:52ch;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+}
+.final-cta .btn{ margin-top:34px; position:relative; }
+
+/* ============ FOOTER ============ */
+footer{
+  background:#0A121C;
+  color:#8A96A2;
+  padding:56px 0 30px;
+  font-size:13.5px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:36px;
+  border-bottom:1px solid var(--line-light);
+}
+@media (max-width:760px){ .footer-grid{ grid-template-columns:1fr 1fr; } }
+.footer-grid h5{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--steel-light);
+  margin-bottom:16px;
+}
+.footer-grid ul li{ margin-bottom:10px; }
+.footer-grid ul li a:hover{ color:var(--brass); }
+.footer-brand p{ margin-top:14px; max-width:34ch; color:#8A96A2; line-height:1.6; }
+.footer-bottom{
+  padding-top:26px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11.5px;
+}
+
+/* ============ SECTION DIVIDER LABEL ============ */
+.page-label{
+  position:absolute;
+  top:110px;
+  right:32px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--steel-light);
+  writing-mode:vertical-rl;
+  opacity:0.7;
+  display:none;
+}
+@media (min-width:1240px){ .page-label{ display:block; } }
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" fill="none" stroke="#C6963B" stroke-width="1.2"/>
+        <circle cx="20" cy="20" r="13.5" fill="none" stroke="#C6963B" stroke-width="1"/>
+        <text x="20" y="24" text-anchor="middle" font-family="IBM Plex Mono" font-size="13" fill="#C6963B" font-weight="600">GCA</text>
+      </svg>
+      <span>Germany Career Academy<small>From India to a career in Germany</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">Founder</a>
+      <a href="#services">Services</a>
+      <a href="#why-germany">Why Germany</a>
+      <a href="#how-it-works">Process</a>
+      <a href="#testimonials">Stories</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#book" class="btn btn-outline">Book a Call</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HOME / HERO ================= -->
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <span class="eyebrow">Germany Career Academy</span>
+      <h1>Your career in Germany starts long before your visa does<em>.</em></h1>
+      <p class="hero-sub">We're the only Germany-focused platform built by someone who actually studied, worked, and built a career here. We guide Indian students through every stage — from choosing the right university to landing a full-time job — not just until your visa is stamped.</p>
+      <div class="hero-ctas">
+        <a href="#book" class="btn btn-primary">Book a Free Career Assessment <span class="btn-arrow">→</span></a>
+        <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+      </div>
+      <div class="hero-trust">
+        <span>Founder trained &amp; employed in Germany</span>
+        <span>End-to-end guidance, not just admissions</span>
+        <span>100% experience-based advice</span>
+      </div>
+    </div>
+    <div class="hero-stampbox reveal in">
+      <div class="hero-doc">
+        <div class="field"><span>Applicant status</span><b>In progress</b></div>
+        <div class="field"><span>Target intake</span><b>Winter / Summer</b></div>
+        <div class="field"><span>APS certification</span><b>Guided</b></div>
+        <div class="field"><span>Visa documentation</span><b>Guided</b></div>
+        <div class="field"><span>Career stage</span><b>Assessment → Offer</b></div>
+        <div class="stamp-wrap">
+          <svg class="stamp" width="92" height="92" viewBox="0 0 100 100">
+            <circle class="ring" cx="50" cy="50" r="46"/>
+            <circle class="ring" cx="50" cy="50" r="38"/>
+            <path id="circlePath" d="M 50,50 m -42,0 a 42,42 0 1,1 84,0 a 42,42 0 1,1 -84,0" fill="none"/>
+            <text><textPath href="#circlePath">GERMANY CAREER ACADEMY • VERIFIED GUIDANCE • </textPath></text>
+            <circle class="center-mark" cx="50" cy="50" r="3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="section-pad">
+  <div class="wrap problem-grid">
+    <div class="reveal">
+      <p class="problem-quote">"Getting a student visa is not the same as building a career."</p>
+    </div>
+    <div class="reveal problem-body">
+      <p>Most consultants disappear the moment your visa is approved. What happens after you land — the accommodation scramble, the job search in a language you don't speak yet, the confusion over your residence permit — is left entirely up to you.</p>
+      <p>We built Germany Career Academy because we lived through exactly that gap, and we know it's the part that decides whether your time in Germany becomes <strong>a career</strong>, or just a degree.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="section-pad on-dim">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why Germany Career Academy</span>
+      <h2>Built on real experience, not repackaged information.</h2>
+    </div>
+    <div class="card-row">
+      <div class="why-card reveal">
+        <span class="num">01 / FIRSTHAND</span>
+        <h3>We've actually done it</h3>
+        <p>Our founder completed both a Bachelor's and a Master's in Germany and now works here full-time. Every recommendation comes from something we personally navigated — not from a script.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="num">02 / COMPLETE</span>
+        <h3>We go beyond admissions</h3>
+        <p>University shortlisting is step one of seven. We stay with you through visa approval, arrival, internships, and your first full-time offer.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="num">03 / HONEST</span>
+        <h3>We say what others won't</h3>
+        <p>If a university, course, or city isn't right for your goals, we'll tell you — even if it means a shorter conversation. Transparency is the business model, not a slogan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT FOUNDER ================= -->
+<section id="about" class="section-pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">About the Founder</span>
+      <h2>I didn't just study in Germany. I built a career here.</h2>
+      <p>Germany Career Academy exists because I couldn't find the guidance I needed when I started — so I built the resource I wished I'd had.</p>
+    </div>
+
+    <div class="founder-grid">
+      <div class="founder-photo reveal">
+        <div class="stamp-wrap">
+          <svg class="stamp" width="76" height="76" viewBox="0 0 100 100">
+            <circle class="ring" cx="50" cy="50" r="46"/>
+            <path id="circlePath2" d="M 50,50 m -42,0 a 42,42 0 1,1 84,0 a 42,42 0 1,1 -84,0" fill="none"/>
+            <text><textPath href="#circlePath2">BACHELOR'S • MASTER'S • EMPLOYED IN GERMANY • </textPath></text>
+            <circle class="center-mark" cx="50" cy="50" r="3"/>
+          </svg>
+        </div>
+        <span class="cap">Founder — Germany Career Academy</span>
+      </div>
+
+      <div class="founder-body reveal">
+        <p>Like many of the students I now work with, I started with a stack of open browser tabs, half-answered forum threads, and a lot of uncertainty about whether Germany was even the right move.</p>
+        <p>I completed my Bachelor's degree in Germany, followed by a Master's degree, and I currently live and work here full-time. In the years between my first application and my current job offer, I went through every stage this platform now guides students through: APS certification, blocked accounts, health insurance paperwork, the apartment hunt in a city I'd never visited, my first German-language interactions at the Bürgeramt, working student jobs, internship applications in a competitive market, and eventually, the transition into a full-time role.</p>
+        <blockquote>None of it was as difficult as it looked from the outside — but almost none of it was explained clearly, either.</blockquote>
+        <p>Most consultants I came across were focused on one thing: getting the admission letter. What happens after was treated as "figure it out once you're there." Germany Career Academy is built to close that exact gap — with guidance that reflects what actually happens, not what looks good in a brochure.</p>
+
+        <ul class="credentials">
+          <li>🎓 Bachelor's Degree — Germany</li>
+          <li>🎓 Master's Degree — Germany</li>
+          <li>💼 Currently employed full-time in Germany</li>
+          <li>📄 Personally completed APS &amp; visa process</li>
+          <li>🏠 Navigated accommodation &amp; relocation solo</li>
+          <li>🧑‍💻 Internship, Werkstudent &amp; full-time job search experience</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="philosophy-row">
+      <div class="p-item reveal">
+        <h4>Honesty over optimism</h4>
+        <p>I'll tell you if a course, city, or timeline doesn't fit your goals — even when it's not what you want to hear.</p>
+      </div>
+      <div class="p-item reveal">
+        <h4>Career-first, always</h4>
+        <p>An admission letter is a milestone, not the finish line. Every recommendation is made with your five-year career in mind.</p>
+      </div>
+      <div class="p-item reveal">
+        <h4>Real experience over recycled advice</h4>
+        <p>If I haven't lived it, researched it thoroughly, or verified it directly, it doesn't go into my guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS / STAGES ================= -->
+<section id="how-it-works" class="section-pad on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How It Works</span>
+      <h2>A clear, structured path from application to employment.</h2>
+      <p>No guesswork. No disappearing after your visa. Here's exactly how we work with you, stage by stage — a genuine seven-stage roadmap, not a marketing funnel.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="stage reveal">
+        <div class="stage-num">01</div>
+        <div class="stage-content">
+          <h3>Career Assessment</h3>
+          <p class="desc">We start by understanding your academic background, budget, goals, and current profile strength — and give you a clear, honest answer on whether Germany fits your career plan.</p>
+          <ul class="stage-list"><li>Profile evaluation</li><li>Eligibility check</li><li>Goal mapping</li></ul>
+        </div>
+      </div>
+      <div class="stage reveal">
+        <div class="stage-num">02</div>
+        <div class="stage-content">
+          <h3>University Selection</h3>
+          <p class="desc">We shortlist universities and courses based on your profile and long-term goals, with a real ROI comparison — not just prestige.</p>
+          <ul class="stage-list"><li>Shortlisting</li><li>ROI analysis</li><li>City comparison</li></ul>
+        </div>
+      </div>
+      <div class="stage reveal">
+        <div class="stage-num">03</div>
+        <div class="stage-content">
+          <h3>Application Support</h3>
+          <p class="desc">We guide your SOP, CV, LORs, and full application timeline across your shortlisted universities, keeping every deadline on track.</p>
+          <ul class="stage-list"><li>SOP review</li><li>CV &amp; LOR guidance</li><li>Timeline management</li></ul>
+        </div>
+      </div>
+      <div class="stage reveal">
+        <div class="stage-num">04</div>
+        <div class="stage-content">
+          <h3>APS &amp; Visa Guidance</h3>
+          <p class="desc">We walk you through APS certification, visa documentation, blocked account setup, and health insurance — the stage that trips up most applicants.</p>
+          <ul class="stage-list"><li>APS certification</li><li>Blocked account</li><li>Health insurance</li></ul>
+        </div>
+      </div>
+      <div class="stage reveal">
+        <div class="stage-num">05</div>
+        <div class="stage-content">
+          <h3>Arrival &amp; Relocation</h3>
+          <p class="desc">From accommodation search to Anmeldung, banking, and your residence permit — we help you land and settle without the usual first-month chaos.</p>
+          <ul class="stage-list"><li>Accommodation</li><li>Anmeldung</li><li>Bank &amp; SIM</li></ul>
+        </div>
+      </div>
+      <div class="stage reveal">
+        <div class="stage-num">06</div>
+        <div class="stage-content">
+          <h3>Career Building</h3>
+          <p class="desc">While you study, we help you secure internships and working student roles, and build a German-market-ready CV and LinkedIn profile.</p>
+          <ul class="stage-list"><li>Internships</li><li>Werkstudent roles</li><li>CV &amp; LinkedIn</li></ul>
+        </div>
+      </div>
+      <div class="stage reveal">
+        <div class="stage-num">07</div>
+        <div class="stage-content">
+          <h3>Long-Term Career Success</h3>
+          <p class="desc">As graduation approaches, we support your full-time job search, interview prep, salary negotiation, and — when relevant — your path toward permanent residency.</p>
+          <ul class="stage-list"><li>Job search</li><li>Interview coaching</li><li>PR guidance</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:40px; font-family:'Fraunces',serif; font-style:italic; font-size:19px; color:#EDE8DA;">Most consultants stop at Step 3. We're just getting started.</p>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="section-pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Services</span>
+      <h2>End-to-end support, from first decision to first job offer.</h2>
+      <p>Every service is designed around one goal — helping you build a real, sustainable career in Germany, not just secure an admission.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <span class="tag">01 — Assessment</span>
+        <h3>Career Assessment</h3>
+        <p>Know exactly where you stand before you spend a rupee on applications.</p>
+        <ul>
+          <li>Profile evaluation (academics, budget, goals)</li>
+          <li>Eligibility for target programs</li>
+          <li>Honest fit recommendation</li>
+        </ul>
+        <div class="best-for">Best for: students unsure if Germany fits their profile</div>
+      </div>
+      <div class="service-card">
+        <span class="tag">02 — Selection</span>
+        <h3>University Selection</h3>
+        <p>Choose universities based on outcomes — not rankings you found on Google.</p>
+        <ul>
+          <li>Course-level shortlisting</li>
+          <li>ROI &amp; tuition comparison</li>
+          <li>City-by-city comparison</li>
+        </ul>
+        <div class="best-for">Best for: students overwhelmed by "top university" lists</div>
+      </div>
+      <div class="service-card">
+        <span class="tag">03 — Admissions</span>
+        <h3>Bachelor's &amp; Master's Admissions</h3>
+        <p>Applications built around what German universities actually look for.</p>
+        <ul>
+          <li>Requirement guidance by program</li>
+          <li>Document checklist</li>
+          <li>Uni-Assist &amp; direct applications</li>
+        </ul>
+        <div class="best-for">Best for: students ready to apply and execute</div>
+      </div>
+      <div class="service-card">
+        <span class="tag">04 — Positioning</span>
+        <h3>SOP, CV &amp; Application Support</h3>
+        <p>Your story, positioned the way German admissions committees expect to see it.</p>
+        <ul>
+          <li>SOP structuring &amp; review</li>
+          <li>LOR guidance for recommenders</li>
+          <li>Academic CV formatting</li>
+        </ul>
+        <div class="best-for">Best for: strong profiles needing sharper presentation</div>
+      </div>
+      <div class="service-card">
+        <span class="tag">05 — Immigration</span>
+        <h3>APS &amp; Visa Guidance</h3>
+        <p>The most confusing part of the process, explained clearly.</p>
+        <ul>
+          <li>Step-by-step APS certification</li>
+          <li>Blocked account &amp; insurance</li>
+          <li>Visa interview preparation</li>
+        </ul>
+        <div class="best-for">Best for: students preparing APS and their visa file</div>
+      </div>
+      <div class="service-card">
+        <span class="tag">06 — Relocation</span>
+        <h3>Accommodation &amp; Relocation</h3>
+        <p>Land in Germany with a plan, not just a suitcase.</p>
+        <ul>
+          <li>Accommodation search strategy</li>
+          <li>Anmeldung, bank account, SIM</li>
+          <li>First 30-days survival guide</li>
+        </ul>
+        <div class="best-for">Best for: students relocating in the coming months</div>
+      </div>
+      <div class="service-card">
+        <span class="tag">07 — Language</span>
+        <h3>German Language (A1–A2)</h3>
+        <p>Enough German to navigate daily life, bureaucracy, and early job conversations.</p>
+        <ul>
+          <li>Structured A1–A2 coaching</li>
+          <li>Practical, real-life German</li>
+          <li>Speaking practice for interviews</li>
+        </ul>
+        <div class="best-for">Best for: students reducing culture shock &amp; boosting job odds</div>
+      </div>
+      <div class="service-card">
+        <span class="tag">08 — Experience</span>
+        <h3>Internship &amp; Working Student Guidance</h3>
+        <p>Build your German work experience while you're still studying.</p>
+        <ul>
+          <li>Werkstudent job search strategy</li>
+          <li>Praktikum application support</li>
+          <li>German-market interview prep</li>
+        </ul>
+        <div class="best-for">Best for: students building a network early</div>
+      </div>
+      <div class="service-card">
+        <span class="tag">09 — Career</span>
+        <h3>Full-Time Job Prep &amp; Career Coaching</h3>
+        <p>Turn your degree into a full-time offer — with a plan, not luck.</p>
+        <ul>
+          <li>CV &amp; LinkedIn optimization</li>
+          <li>Mock interviews &amp; salary negotiation</li>
+          <li>Visa-to-work permit transition</li>
+        </ul>
+        <div class="best-for">Best for: final-year students &amp; recent graduates</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:56px; text-align:center;">
+    <p style="font-size:16px; color:var(--text-muted); max-width:52ch; margin:0 auto 24px;">Not sure which service you need? Start with a Career Assessment, and we'll build a roadmap that tells you exactly what to prioritize.</p>
+    <a href="#book" class="btn btn-outline-dark">Book a Free Career Assessment <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ================= WHY GERMANY ================= -->
+<section id="why-germany" class="section-pad on-dim">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why Germany?</span>
+      <h2>Why thousands of Indian students choose Germany — and what they don't tell you.</h2>
+      <p>Germany offers one of the strongest study-to-career pathways in the world. Here's an honest look at what makes it worth considering — and what to actually plan for.</p>
+    </div>
+
+    <div class="wg-grid">
+      <div class="wg-item reveal">
+        <h4>Low to no tuition fees</h4>
+        <p>Most public universities charge little to no tuition, even for international students — a major advantage over the US, UK, or Australia.</p>
+      </div>
+      <div class="wg-item reveal">
+        <h4>Globally recognized degrees</h4>
+        <p>German degrees, particularly in engineering, technology, and applied sciences, are respected worldwide and carry strong weight with employers.</p>
+      </div>
+      <div class="wg-item reveal">
+        <h4>18-month post-study work permit</h4>
+        <p>Graduates get an 18-month window to find a job related to their qualification — one of the more generous post-study visa policies globally.</p>
+      </div>
+      <div class="wg-item reveal">
+        <h4>Strong demand for skilled talent</h4>
+        <p>An aging workforce and a documented shortage of skilled professionals in engineering, IT, and data fields creates real opportunity for graduates.</p>
+      </div>
+      <div class="wg-item reveal">
+        <h4>A genuine path to residency</h4>
+        <p>With the right career trajectory, Germany offers a realistic pathway to permanent residency — not just a temporary study experience.</p>
+      </div>
+      <div class="wg-item reveal">
+        <h4>Central location, high quality of life</h4>
+        <p>Access to the rest of Europe, strong infrastructure, safety, and a high standard of living for students and professionals alike.</p>
+      </div>
+    </div>
+
+    <div class="honest-box reveal">
+      <span class="eyebrow">The honest part</span>
+      <h3>What most consultants won't tell you</h3>
+      <ul>
+        <li>German bureaucracy is real, and it moves slower than you'll expect — plan for it.</li>
+        <li>Public university applications are highly competitive for popular courses (especially CS and Data Science) — profile strength matters.</li>
+        <li>Finding your first job without at least basic German (A2–B1) is significantly harder outside pure tech roles.</li>
+        <li>Cost of living varies dramatically by city — Munich and Frankfurt are very different from Leipzig or Dresden.</li>
+        <li>Accommodation, not admission, is often the hardest part of the entire journey — start early.</li>
+      </ul>
+      <p class="note">We tell you this not to discourage you, but because knowing it in advance is what makes the difference between a smooth relocation and a stressful one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="section-pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQs</span>
+      <h2>Straight answers to the questions we hear most.</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary><span><span class="q-num">Q1</span>Is Germany Career Academy a traditional study abroad consultancy?</span><span class="plus">+</span></summary>
+        <p class="a">No. Traditional consultants typically stop supporting students after the visa is approved. We provide guidance across the entire journey — university selection, admissions, visa, relocation, internships, and full-time employment.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q2</span>Who is behind Germany Career Academy?</span><span class="plus">+</span></summary>
+        <p class="a">The platform is founded and personally run by someone who completed both a Bachelor's and Master's degree in Germany and currently works full-time there — meaning the guidance comes from direct, recent experience, not secondhand research.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q3</span>Do I need to know German before applying?</span><span class="plus">+</span></summary>
+        <p class="a">Not necessarily for admission — many Master's programs are taught in English. However, basic German (A1–A2) significantly improves your daily life, part-time job prospects, and long-term career opportunities, which is why we offer language guidance as part of our services.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q4</span>Can you guarantee admission to a specific university?</span><span class="plus">+</span></summary>
+        <p class="a">No ethical consultant can guarantee admission, and we won't pretend otherwise. What we guarantee is a well-prepared, competitive application built around an honest assessment of your profile.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q5</span>Do you only work with Engineering and IT students?</span><span class="plus">+</span></summary>
+        <p class="a">These are our primary focus areas given the founder's background and Germany's strong demand in these fields, but we also support students in related technical and applied fields. Book a career assessment to check fit.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q6</span>What is APS, and why does it matter?</span><span class="plus">+</span></summary>
+        <p class="a">APS (Akademische Prüfstelle) is a mandatory certification process for Indian students verifying the authenticity of academic documents before a German student visa can be issued. We provide step-by-step guidance through this process.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q7</span>How early should I start the process?</span><span class="plus">+</span></summary>
+        <p class="a">Ideally 10–12 months before your intended intake, to allow sufficient time for university applications, APS certification, visa processing, and accommodation search.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q8</span>Do you help with jobs after graduation, not just during studies?</span><span class="plus">+</span></summary>
+        <p class="a">Yes — full-time job preparation and career coaching are core parts of our service, not an afterthought. This is one of the main ways we differ from traditional consultants.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q9</span>Is this service only for students who haven't applied yet?</span><span class="plus">+</span></summary>
+        <p class="a">No. We also work with students who already have an offer and need help with visa, relocation, or career support, as well as students already in Germany looking for internship or job guidance.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span><span class="q-num">Q10</span>How do I get started?</span><span class="plus">+</span></summary>
+        <p class="a">Book a free initial career assessment. We'll evaluate your profile and recommend a clear next step — no pressure, no obligation.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials" class="section-pad on-dim">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Testimonials</span>
+      <h2>Real students. Real journeys. Real outcomes.</h2>
+      <p>Placeholder stories shown below — to be replaced with verified student testimonials and photos before launch.</p>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <span class="verified">✓ Verified Student</span>
+        <p class="quote">"I had three different 'top university' lists from three different consultants — none matched my profile. The career assessment here was the first time someone actually looked at my background before recommending a program."</p>
+        <div class="who">Ananya R.</div>
+        <div class="prog">Master's in Data Science, TU Dortmund — Admissions Support</div>
+      </div>
+      <div class="testi-card reveal">
+        <span class="verified">✓ Verified Student</span>
+        <p class="quote">"Most people told me to worry about the visa first and figure out housing later. That advice nearly cost me my first month. The relocation guidance here is the reason I had accommodation sorted before I landed."</p>
+        <div class="who">Rohit M.</div>
+        <div class="prog">Bachelor's in Mechanical Engineering, RWTH Aachen — Relocation Support</div>
+      </div>
+      <div class="testi-card reveal">
+        <span class="verified">✓ Verified Student</span>
+        <p class="quote">"I didn't expect a study-abroad consultant to still be answering my questions a year after my visa was approved. That's the actual difference here — they stayed involved through my internship search."</p>
+        <div class="who">Sneha K.</div>
+        <div class="prog">Master's in Computer Science, University of Stuttgart — Career Support</div>
+      </div>
+      <div class="testi-card reveal">
+        <span class="verified">✓ Verified Student</span>
+        <p class="quote">"The SOP review process was blunt in the best way. I got told exactly what wasn't working and why — not just generic praise. My final draft was completely different, and stronger for it."</p>
+        <div class="who">Aditya V.</div>
+        <div class="prog">Master's in Electrical Engineering, TU Munich — Application Support</div>
+      </div>
+      <div class="testi-card reveal">
+        <span class="verified">✓ Verified Student</span>
+        <p class="quote">"APS felt impossible to understand from YouTube videos alone. Having someone walk me through it step-by-step, based on having done it themselves, saved me weeks of confusion."</p>
+        <div class="who">Priya S.</div>
+        <div class="prog">Bachelor's Applicant, Class of 2026 — APS &amp; Visa Guidance</div>
+      </div>
+      <div class="testi-card reveal">
+        <span class="verified">✓ Verified Student</span>
+        <p class="quote">"What stood out was being told, early on, that my first-choice city didn't match my budget. That honesty saved me from a mistake I'd have made on my own."</p>
+        <div class="who">Karan T.</div>
+        <div class="prog">Master's in Mechanical Engineering, TU Berlin — University Selection</div>
+      </div>
+    </div>
+
+    <div class="stats-bar reveal">
+      <div class="stat"><div class="n">500+</div><div class="l">Students Guided</div></div>
+      <div class="stat"><div class="n">40+</div><div class="l">Universities Represented</div></div>
+      <div class="stat"><div class="n">92%</div><div class="l">Application Success Rate</div></div>
+      <div class="stat"><div class="n">7</div><div class="l">Stages of Support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOK A CONSULTATION ================= -->
+<section id="book" class="section-pad on-dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Book a Consultation</span>
+      <h2>Get a clear, honest roadmap for your Germany journey.</h2>
+      <p>In a focused session, we'll assess your profile, discuss your goals, and map out exactly what your path to studying and working in Germany could look like.</p>
+    </div>
+
+    <div class="session-grid">
+      <div class="session-card reveal">
+        <span class="tag2">Introductory</span>
+        <h3>Free Career Assessment Call</h3>
+        <div class="price">30 minutes · No cost</div>
+        <p>A no-obligation introductory session to evaluate fit and answer your key questions.</p>
+        <a href="#contact" class="btn btn-outline-dark">Book Free Call <span class="btn-arrow">→</span></a>
+      </div>
+      <div class="session-card featured reveal">
+        <span class="tag2">In-Depth</span>
+        <h3>Strategy Session</h3>
+        <div class="price">60 minutes · Paid</div>
+        <p>A comprehensive, paid consultation covering university shortlisting, application strategy, and a detailed roadmap document you can keep.</p>
+        <a href="#contact" class="btn btn-primary">Book Strategy Session <span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="checklist reveal">
+      <h4>What you'll get from this session</h4>
+      <ul>
+        <li>An honest evaluation of your current profile and eligibility</li>
+        <li>Clarity on whether Germany aligns with your career goals</li>
+        <li>A personalized overview of suitable universities and courses</li>
+        <li>A realistic timeline based on your target intake</li>
+        <li>Clear next steps — with no pressure to sign up for anything</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section-pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Let's talk about your Germany career plan.</h2>
+      <p>Whether you're just exploring your options or ready to start your application, we're here to give you a straight answer. We personally respond to every inquiry within 24–48 hours.</p>
+    </div>
+
+    <div class="form-grid">
+      <form class="doc-form reveal" onsubmit="return false;" style="background:var(--ink); border-color:var(--line-light);">
+        <span class="eyebrow" style="color:var(--brass);">Application Inquiry Form</span>
+        <div class="field-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your full name" style="color:var(--text-light);">
+        </div>
+        <div class="field-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com" style="color:var(--text-light);">
+        </div>
+        <div class="field-group">
+          <label>Phone / WhatsApp</label>
+          <input type="tel" placeholder="+91" style="color:var(--text-light);">
+        </div>
+        <div class="field-group">
+          <label>Current Education Level</label>
+          <select style="color:var(--text-light);">
+            <option>12th Grade</option>
+            <option>Bachelor's Ongoing</option>
+            <option>Bachelor's Completed</option>
+            <option>Working Professional</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label>Intended Degree</label>
+          <select style="color:var(--text-light);">
+            <option>Master's</option>
+            <option>Bachelor's</option>
+            <option>Not Sure Yet</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label>Your Message</label>
+          <textarea placeholder="Tell us a bit about your goals..." style="color:var(--text-light);"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send My Message <span class="btn-arrow">→</span></button>
+      </form>
+
+      <div class="contact-side reveal">
+        <h3>Other ways to reach us</h3>
+        <div class="row"><div class="k">Email</div><div class="v"><a href="mailto:hello@germanycareeracademy.com">hello@germanycareeracademy.com</a></div></div>
+        <div class="row"><div class="k">WhatsApp</div><div class="v">Chat with us directly for a faster response</div></div>
+        <div class="row"><div class="k">Social</div><div class="v">Instagram · LinkedIn · YouTube</div></div>
+        <div class="row"><div class="k">Response</div><div class="v">Within 24–48 hours, personally</div></div>
+        <p style="margin-top:28px; font-size:14.5px; color:var(--text-muted); line-height:1.6;">Prefer a direct conversation over a form? <a href="#book" style="color:var(--brass-dark); font-weight:600;">Book a free career assessment call</a> instead — it's the fastest way to get a real answer about your specific profile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta">
+  <div class="wrap">
+    <span class="eyebrow" style="position:relative;">Start Today</span>
+    <h2>Your career in Germany isn't a guess. Let's plan it properly.</h2>
+    <p>Book a one-on-one career assessment and get a clear, honest roadmap — built around your profile, not a generic checklist.</p>
+    <a href="#contact" class="btn btn-primary">Book Your Free Career Assessment <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand" style="color:#F3EFE4;">
+          <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="width:26px;height:26px;">
+            <circle cx="20" cy="20" r="18" fill="none" stroke="#C6963B" stroke-width="1.2"/>
+            <text x="20" y="24" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="#C6963B" font-weight="600">GCA</text>
+          </svg>
+          <span>Germany Career Academy</span>
+        </div>
+        <p>From India to a successful career in Germany. End-to-end guidance from someone who's lived it.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#about">About the Founder</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-germany">Why Germany</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#testimonials">Student Stories</a></li>
+          <li><a href="#">Germany Guide</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get Started</h5>
+        <ul>
+          <li><a href="#book">Book a Consultation</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Germany Career Academy. All rights reserved.</span>
+      <span>Frankfurt am Main, Germany</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    },{ threshold:0.12 });
+    revealEls.forEach(el=>io.observe(el));
+  } else {
+    revealEls.forEach(el=>el.classList.add('in'));
+  }
+
+  // Mobile nav toggle -> simple show/hide of links stacked
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if(toggle){
+    toggle.addEventListener('click', ()=>{
+      const open = links.style.display === 'flex';
+      links.style.display = open ? 'none' : 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'absolute';
+      links.style.top = '64px';
+      links.style.left = '0';
+      links.style.right = '0';
+      links.style.background = 'rgba(15,27,45,0.98)';
+      links.style.padding = '20px 32px';
+      links.style.gap = '18px';
+    });
+  }
+</script>
+
+</body>
+</html>
