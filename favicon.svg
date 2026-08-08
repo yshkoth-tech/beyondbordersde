@@ -6,3 +6,22 @@
   <rect y="42.666" width="64" height="21.334" fill="#FFC72C"/>
   <text x="32" y="42" font-family="Inter, Fraunces, system-ui, sans-serif" font-weight="700" font-size="26" text-anchor="middle" fill="#3B2A24">BB</text>
 </svg>
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="BeyondBordersDE favicon">
+  <rect width="64" height="64" fill="#FFFFFF"/>
+  <rect y="0" width="64" height="21.333" fill="#000000"/>
+  <rect y="21.333" width="64" height="21.333" fill="#C8102E"/>
+  <rect y="42.666" width="64" height="21.334" fill="#FFC72C"/>
+  <text x="32" y="42" font-family="Inter, Fraunces, system-ui, sans-serif" font-weight="700" font-size="26" text-anchor="middle" fill="#3B2A24">BB</text>
+</svg>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="BeyondBordersDE favicon">
+  <rect width="64" height="64" fill="#FFFFFF"/>
+  <rect y="0" width="64" height="21.333" fill="#000000"/>
+  <rect y="21.333" width="64" height="21.333" fill="#C8102E"/>
+  <rect y="42.666" width="64" height="21.334" fill="#FFC72C"/>
+  <text x="32" y="42" font-family="Inter, Fraunces, system-ui, sans-serif" font-weight="700" font-size="26" text-anchor="middle" fill="#3B2A24">BB</text>
+</svg>
+>>>>>>> f2f6b0b (chore: add favicon and link tags in index.html)
