@@ -1276,25 +1276,29 @@ footer{
     </div>
 
     <div class="form-grid">
-      <form class="doc-form reveal" onsubmit="return false;" style="background:var(--ink); border-color:var(--line-light);">
+      <form class="doc-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="post" style="background:var(--ink); border-color:var(--line-light);">
         <input type="hidden" name="access_key" value="b1190b4a-1c63-49e1-b9e0-b769f6f24706">
+        <input type="hidden" name="subject" value="New Inquiry from BeyondBordersDE Website">
+        <input type="hidden" name="from_name" value="BeyondBordersDE Website">
+        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
         <span class="eyebrow" style="color:var(--brass);">Application Inquiry Form</span>
         <div class="field-group">
           <label>Full Name</label>
-          <input type="text" placeholder="Your full name" style="color:var(--text-light);">
+          <input type="text" name="name" placeholder="Your full name" style="color:var(--text-light);" required>
         </div>
         <div class="field-group">
           <label>Email Address</label>
-          <input type="email" placeholder="you@example.com" style="color:var(--text-light);">
+          <input type="email" name="email" placeholder="you@example.com" style="color:var(--text-light);" required>
         </div>
         <div class="field-group">
           <label>Phone / WhatsApp</label>
-          <input type="tel" placeholder="+91" style="color:var(--text-light);">
+          <input type="tel" name="phone" placeholder="+91" style="color:var(--text-light);">
         </div>
         <div class="field-group">
           <label>Current Education Level</label>
-          <select style="color:var(--text-light);">
+          <select name="education_level" style="color:var(--text-light);">
             <option>12th Grade</option>
+            <option>Bachelor's Ongoing</option>
             <option>Bachelor's Completed</option>
             <option>Master's Completed</option>
             <option>Working Professional</option>
@@ -1302,7 +1306,7 @@ footer{
         </div>
         <div class="field-group">
           <label>Intended Degree</label>
-          <select style="color:var(--text-light);">
+          <select name="intended_degree" style="color:var(--text-light);">
             <option>Master's</option>
             <option>Bachelor's</option>
             <option>Not Sure Yet</option>
@@ -1310,16 +1314,17 @@ footer{
         </div>
         <div class="field-group">
           <label>Consultation</label>
-          <select style="color:var(--text-light);">
+          <select name="consultation_type" style="color:var(--text-light);">
             <option>Free Career Assessment Call</option>
             <option>Paid Strategy Session</option>
           </select>
         </div>
         <div class="field-group">
           <label>Your Message</label>
-          <textarea placeholder="Tell us a bit about your goals..." style="color:var(--text-light);"></textarea>
+          <textarea name="message" placeholder="Tell us a bit about your goals..." style="color:var(--text-light);"></textarea>
         </div>
         <button class="btn btn-primary" type="submit">Send My Message <span class="btn-arrow">→</span></button>
+        <div id="formStatus" style="margin-top:14px; font-size:14px; display:none;"></div>
       </form>
 
       <div class="contact-side reveal">
