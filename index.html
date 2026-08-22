@@ -204,7 +204,7 @@ section{ position:relative; }
 }
 .hero-grid{
   display:grid;
-  grid-template-columns:1.15fr 0.85fr;
+  grid-template-columns:1fr;
   gap:56px;
   align-items:center;
 }
@@ -215,7 +215,7 @@ section{ position:relative; }
   font-size:clamp(34px, 5vw, 58px);
   line-height:1.08;
   margin-top:18px;
-  max-width:14ch;
+  max-width:none;
 }
 .hero h1 em{
   font-style:italic;
@@ -226,7 +226,7 @@ section{ position:relative; }
   font-size:17.5px;
   line-height:1.65;
   color:#C9D2DA;
-  max-width:52ch;
+  max-width:none;
 }
 .hero-trust{
   margin-top:52px;
@@ -798,6 +798,10 @@ footer{
 </head>
 <body>
 
+<div class="on-dark" style="padding:10px 20px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text-light); border-bottom:1px solid var(--line-light);">
+  Founding Cohort Offer — Full end-to-end guidance at a fraction of the regular price. Only <span id="spotsLeft" style="color:var(--brass); font-weight:600;">10 spots available</span>.
+</div>
+
 <!-- ================= NAV ================= -->
 <nav class="nav">
   <div class="nav-inner">
@@ -812,7 +816,7 @@ footer{
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-cta">
-      <a href="#book" class="btn btn-outline">Book a Call</a>
+      <a href="#contact" class="btn btn-outline">Book a Call</a>
       <button class="nav-toggle" aria-label="Menu">☰</button>
     </div>
   </div>
@@ -875,7 +879,7 @@ footer{
 <!-- ================= WHY GERMANY ================= -->
 <section id="why-germany" class="section-pad on-dim">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head reveal" style="max-width:100%;">
       <span class="eyebrow">Why Germany?</span>
       <h2>Why thousands of Indian students choose Germany, and why I did too.</h2>
       <p>Germany offers one of the strongest study-to-career pathways in the world. Here's an honest look at what makes it worth considering, and what to actually plan for.</p>
@@ -917,6 +921,7 @@ footer{
         <li>Finding your first job without at least basic German (A2–B1) is significantly harder outside pure tech roles.</li>
         <li>Cost of living varies dramatically by city: Munich and Frankfurt are very different from Leipzig or Dresden.</li>
         <li>Accommodation, not admission, is often the hardest part of the entire journey. Start early.</li>
+        <li>Starting Summer 2027, Master's applicants in select fields (Engineering, Business, Commerce, Finance) must also take the new dMAT exam as part of APS. Most consultants haven't caught up on this yet.</li>
       </ul>
       <p class="note">We tell you this not to discourage you, but because knowing it in advance is what makes the difference between a smooth relocation and a stressful one.</p>
     </div>
@@ -929,7 +934,7 @@ footer{
     <div class="sec-head reveal">
       <span class="eyebrow">How It Works</span>
       <h2>A clear, structured path from application to employment.</h2>
-      <p>No guesswork. No disappearing after your visa. Here's exactly how we work with you, stage by stage, a genuine seven-stage roadmap, not a marketing funnel.</p>
+      <p>No guesswork. No disappearing after your visa. Here's exactly how we work with you, stage by stage, a genuine  roadmap, not a marketing funnel.</p>
     </div>
 
     <div class="timeline">
@@ -962,7 +967,7 @@ footer{
         <div class="stage-content">
           <h3>APS &amp; Visa Guidance</h3>
           <p class="desc">We walk you through APS certification, visa documentation, blocked account setup, and health insurance: the stage that trips up most applicants.</p>
-          <ul class="stage-list"><li>APS certification</li><li>Blocked account</li><li>Health insurance</li></ul>
+          <ul class="stage-list"><li>APS certification</li><li>Blocked account</li><li>Health insurance</li><li>dMAT exam guidance</li></ul>
         </div>
       </div>
       <div class="stage reveal">
@@ -990,153 +995,62 @@ footer{
 <!-- ================= SERVICES ================= -->
 <section id="services" class="section-pad">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head reveal" style="max-width:100%;">
       <span class="eyebrow">Services</span>
       <h2>End-to-end support, from first decision to first job offer.</h2>
       <p>Every service is designed around one goal, helping you build a real, sustainable career in Germany, not just secure an admission.</p>
     </div>
-  </div>
 
-  <div class="wrap">
     <div class="services-grid reveal">
       <div class="service-card">
-        <span class="tag">01 · Assessment</span>
-        <h3>Career Assessment</h3>
-        <p>Know exactly where you stand before you spend a rupee on applications.</p>
+        <span class="tag">Tier 1</span>
+        <h3>Admit — Application &amp; Visa</h3>
+        <p>Everything you need to get admitted and get your visa approved.</p>
+        <div class="price">Early bird offer: ₹7,000 <del>(Regular price: ₹19,999)</del></div>
         <ul>
-          <li>Profile evaluation (academics, budget, goals)</li>
-          <li>Eligibility for target programs</li>
-          <li>Honest fit recommendation</li>
+          <li>Career Assessment</li>
+          <li>University Selection</li>
+          <li>Application Support</li>
+          <li>APS &amp; Visa Guidance</li>
         </ul>
-        <div class="best-for">Best for: students unsure if Germany fits their profile</div>
       </div>
       <div class="service-card">
-        <span class="tag">02 · Selection</span>
-        <h3>University Selection</h3>
-        <p>Choose universities based on outcomes, not rankings you found on Google.</p>
+        <span class="tag">Tier 2</span>
+        <h3>Arrive — Complete Relocation</h3>
+        <p>Application through visa, plus a smooth landing in Germany.</p>
+        <div class="price">Early bird offer: ₹10,000 <del>(Regular price: ₹24,999)</del></div>
         <ul>
-          <li>Course-level shortlisting</li>
-          <li>ROI &amp; tuition comparison</li>
-          <li>City-by-city comparison</li>
+          <li>Everything in Tier 1</li>
+          <li>Arrival &amp; Relocation</li>
+          <li>Accommodation, Anmeldung, banking, SIM, residence permit</li>
         </ul>
-        <div class="best-for">Best for: students overwhelmed by "top university" lists</div>
       </div>
       <div class="service-card">
-        <span class="tag">03 · Admissions</span>
-        <h3>Bachelor's &amp; Master's Admissions</h3>
-        <p>Applications built around what German universities actually look for.</p>
+        <span class="tag">Tier 3 · Flagship</span>
+        <h3>Establish — Career Success</h3>
+        <p>The full journey — from first decision to a real career in Germany. Our flagship program.</p>
+        <div class="price">Early bird offer: ₹15,000 <del>(Regular price: ₹39,999)</del></div>
         <ul>
-          <li>Requirement guidance by program</li>
-          <li>Document checklist</li>
-          <li>Uni-Assist &amp; direct applications</li>
+          <li>Everything in Tier 2</li>
+          <li>Career Building and Long-term Career Support</li>
+          <li>CV/LinkedIn, internships, working student roles, interview prep, PR guidance</li>
         </ul>
-        <div class="best-for">Best for: students ready to apply and execute</div>
-      </div>
-      <div class="service-card">
-        <span class="tag">04 · Positioning</span>
-        <h3>SOP, CV &amp; Application Support</h3>
-        <p>Your story, positioned the way German admissions committees expect to see it.</p>
-        <ul>
-          <li>SOP structuring &amp; review</li>
-          <li>LOR guidance for recommenders</li>
-          <li>Academic CV formatting</li>
-        </ul>
-        <div class="best-for">Best for: strong profiles needing sharper presentation</div>
-      </div>
-      <div class="service-card">
-        <span class="tag">05 · Immigration</span>
-        <h3>APS &amp; Visa Guidance</h3>
-        <p>The most confusing part of the process, explained clearly.</p>
-        <ul>
-          <li>Step-by-step APS certification</li>
-          <li>Blocked account &amp; insurance</li>
-          <li>Visa interview preparation</li>
-        </ul>
-        <div class="best-for">Best for: students preparing APS and their visa file</div>
-      </div>
-      <div class="service-card">
-        <span class="tag">06 · Relocation</span>
-        <h3>Accommodation &amp; Relocation</h3>
-        <p>Land in Germany with a plan, not just a suitcase.</p>
-        <ul>
-          <li>Accommodation search strategy</li>
-          <li>Anmeldung, bank account, SIM</li>
-          <li>First 30-days survival guide</li>
-        </ul>
-        <div class="best-for">Best for: students relocating in the coming months</div>
-      </div>
-      <div class="service-card">
-        <span class="tag">07 · Language</span>
-        <h3>German Language (A1–A2)</h3>
-        <p>Enough German to navigate daily life, bureaucracy, and early job conversations.</p>
-        <ul>
-          <li>Structured A1–A2 coaching</li>
-          <li>Practical, real-life German</li>
-          <li>Speaking practice for interviews</li>
-        </ul>
-        <div class="best-for">Best for: students reducing culture shock &amp; boosting job odds</div>
-      </div>
-      <div class="service-card">
-        <span class="tag">08 · Experience</span>
-        <h3>Internship &amp; Working Student Guidance</h3>
-        <p>Build your German work experience while you're still studying.</p>
-        <ul>
-          <li>Werkstudent job search strategy</li>
-          <li>Praktikum application support</li>
-          <li>German-market interview prep</li>
-        </ul>
-        <div class="best-for">Best for: students building a network early</div>
       </div>
     </div>
+    <p class="best-for" style="margin:14px 0 0;">Founding Cohort pricing is available to the first 10 students only and will increase permanently once these spots are filled.</p>
+    <p class="best-for" style="margin:10px 0 56px;">100% Refund Guarantee — If you don't receive a single admission offer after applying to at least 5 of our recommended universities and meeting all submission deadlines, we refund your full fee.</p>
   </div>
-</section>
 
-<!-- ================= BOOK A CONSULTATION ================= -->
-<section id="book" class="section-pad on-dark">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Book a Consultation</span>
-      <h2>Get a clear, honest roadmap for your Germany journey.</h2>
-      <p>In a focused session, we'll assess your profile, discuss your goals, and map out exactly what your path to studying and working in Germany could look like.</p>
-    </div>
-
-    <div class="session-grid">
-      <div class="session-card reveal">
-        <span class="tag2">Introductory</span>
-        <h3>Free Career Assessment Call</h3>
-        <div class="price">30 minutes · No cost</div>
-        <p>A no-obligation introductory session to evaluate fit and answer your key questions.</p>
-        <a href="#contact" class="btn btn-outline-dark">Book Free Call <span class="btn-arrow">→</span></a>
-      </div>
-      <div class="session-card featured reveal">
-        <span class="tag2">In-Depth</span>
-        <h3>Strategy Session</h3>
-        <div class="price">60 minutes · Paid</div>
-        <p>A comprehensive, paid consultation covering university shortlisting, application strategy, and a detailed roadmap document you can keep.</p>
-        <a href="#contact" class="btn btn-primary">Book Strategy Session <span class="btn-arrow">→</span></a>
-      </div>
-    </div>
-
-    <div class="checklist reveal">
-      <h4>What you'll get from this session</h4>
-      <ul>
-        <li>An honest evaluation of your current profile and eligibility</li>
-        <li>Clarity on whether Germany aligns with your career goals</li>
-        <li>A personalized overview of suitable universities and courses</li>
-        <li>A realistic timeline based on your target intake</li>
-        <li>Clear next steps, with no pressure to sign up for anything</li>
-      </ul>
-    </div>
-  </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="section-pad">
+<section id="contact" class="section-pad on-dim">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head reveal" style="max-width:100%;">
       <span class="eyebrow">Contact</span>
       <h2>Let's talk about your Germany career plan.</h2>
       <p>Whether you're just exploring your options or ready to start your application, we're here to give you a straight answer. We personally respond to every inquiry within 24–48 hours.</p>
+      <p>Not ready for a form? Book a free 30-minute Career Assessment Call instead — no obligation, no cost. Just fill in your details below and select 'Free Career Assessment Call' as your consultation type.</p>
     </div>
 
     <div class="form-grid">
@@ -1180,7 +1094,9 @@ footer{
           <label>Consultation</label>
           <select name="consultation_type" style="color:var(--text-light);">
             <option>Free Career Assessment Call</option>
-            <option>Paid Strategy Session</option>
+            <option>Admit — Application &amp; Visa</option>
+            <option>Arrive — Complete Relocation</option>
+            <option>Establish — Career Success</option>
           </select>
         </div>
         <div class="field-group">
@@ -1197,7 +1113,6 @@ footer{
         <div class="row"><div class="k">WhatsApp</div><div class="v">+49 151 6614004</div></div>
         <div class="row"><div class="k">Social</div><div class="v">Instagram · LinkedIn</div></div>
         <div class="row"><div class="k">Response</div><div class="v">Within 24–48 hours, personally</div></div>
-        <p style="margin-top:28px; font-size:14.5px; color:var(--text-muted); line-height:1.6;">Prefer a direct conversation over a form? <a href="#book" style="color:var(--brass-dark); font-weight:600;">Book a free career assessment call</a> instead. It's the fastest way to get a real answer about your specific profile.</p>
       </div>
     </div>
   </div>
