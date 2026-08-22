@@ -228,12 +228,6 @@ section{ position:relative; }
   color:#C9D2DA;
   max-width:52ch;
 }
-.hero-ctas{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-top:36px;
-}
 .hero-trust{
   margin-top:52px;
   display:flex;
@@ -573,45 +567,6 @@ section{ position:relative; }
 .philosophy-row .p-item h4{ font-size:16.5px; margin-bottom:8px; }
 .philosophy-row .p-item p{ font-size:14.5px; color:var(--text-muted); line-height:1.6; }
 
-/* ============ FAQ ============ */
-.faq-list{ border-top:1px solid var(--line); }
-.faq-item{ border-bottom:1px solid var(--line); }
-.faq-item summary{
-  cursor:pointer;
-  list-style:none;
-  padding:24px 4px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  font-family:'Fraunces',serif;
-  font-size:17.5px;
-  color:var(--ink);
-  font-weight:500;
-}
-.faq-item summary::-webkit-details-marker{ display:none; }
-.faq-item summary .q-num{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:12px;
-  color:var(--brass-dark);
-  margin-right:14px;
-}
-.faq-item summary .plus{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:20px;
-  color:var(--brass-dark);
-  flex-shrink:0;
-  transition:transform .25s ease;
-}
-.faq-item[open] summary .plus{ transform:rotate(45deg); }
-.faq-item .a{
-  padding:0 4px 26px 40px;
-  font-size:15.3px;
-  color:var(--text-muted);
-  line-height:1.7;
-  max-width:70ch;
-}
-
 /* ============ TESTIMONIALS ============ */
 .testi-grid{
   display:grid;
@@ -847,14 +802,13 @@ footer{
 <nav class="nav">
   <div class="nav-inner">
     <a href="#home" class="brand">
-      <span>BeyondBordersDE<small>TO A SUCCESSFUL CAREER IN GERMANY</small></span>
+      <span>BeyondBordersDE<small>Helping Indian Students Build Successful Careers in Germany</small></span>
     </a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#why-germany">Why Germany</a>
       <a href="#how-it-works">Process</a>
-      <a href="#faq">FAQs</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-cta">
@@ -870,10 +824,6 @@ footer{
     <div class="reveal in">
       <h1>Your career in Germany starts long before your visa does<em>.</em></h1>
       <p class="hero-sub">Most consultants disappear the moment your visa is approved. We don't. Guided by someone who actually studied and built a career in Germany, we support students through every stage: university selection, arrival, student jobs, internships, and the career search after graduation.</p>
-      <div class="hero-ctas">
-        <a href="#book" class="btn btn-primary">Book a Free Career Assessment <span class="btn-arrow">→</span></a>
-        <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
-      </div>
       <div class="hero-trust"></div>
     </div>
   </div>
@@ -883,7 +833,7 @@ footer{
 <section id="about" class="section-pad">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">About BeyondBordersDE</span>
+      <span class="eyebrow">About Yash Kothari: Founder of BeyondBordersDE</span>
       <h2>I didn't just study in Germany. I built a career here.</h2>
       <p>BeyondBordersDE exists because I couldn't find the guidance I needed when I started, so I built the resource I wished I'd had.</p>
     </div>
@@ -912,7 +862,7 @@ footer{
           <li>🎓 Bachelor's Degree, Germany</li>
           <li>🎓 Master's Degree, Germany</li>
           <li>💼 Currently employed full-time in Germany</li>
-          <li>📄 Personally completed APS &amp; visa process</li>
+          <li>📄 Personally completed the entire application &amp; visa process</li>
           <li>🏠 Navigated accommodation &amp; relocation solo</li>
           <li>🧑‍💻 Internship, Werkstudent &amp; full-time job search experience</li>
         </ul>
@@ -922,42 +872,53 @@ footer{
   </div>
 </section>
 
-<!-- ================= PROBLEM ================= -->
-<section class="section-pad">
-  <div class="wrap problem-grid">
-    <div class="reveal">
-      <p class="problem-quote">"Getting a student visa is not the same as building a career."</p>
-    </div>
-    <div class="reveal problem-body">
-      <p>Most consultants disappear the moment your visa is approved. What happens after you land, including the accommodation scramble, the job search in a language you don't speak yet, and the confusion over your residence permit, is left entirely up to you.</p>
-      <p>We built BeyondBordersDE because we lived through exactly that gap, and we know it's the part that decides whether your time in Germany becomes <strong>a career</strong>, or just a degree.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= WHY US ================= -->
-<section class="section-pad on-dim">
+<!-- ================= WHY GERMANY ================= -->
+<section id="why-germany" class="section-pad on-dim">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Why BeyondBordersDE</span>
-      <h2>Built on real experience, not repackaged information.</h2>
+      <span class="eyebrow">Why Germany?</span>
+      <h2>Why thousands of Indian students choose Germany, and why I did too.</h2>
+      <p>Germany offers one of the strongest study-to-career pathways in the world. Here's an honest look at what makes it worth considering, and what to actually plan for.</p>
     </div>
-    <div class="card-row">
-      <div class="why-card reveal">
-        <span class="num">01 / FIRSTHAND</span>
-        <h3>We've actually done it</h3>
-        <p>Our founder completed both a Bachelor's and a Master's in Germany and now works here full-time. Every recommendation comes from something we personally navigated, not from a script.</p>
+
+    <div class="wg-grid">
+      <div class="wg-item reveal">
+        <h4>Low to no tuition fees</h4>
+        <p>Most public universities charge little to no tuition, even for international students, a major advantage over the US, UK, or Australia.</p>
       </div>
-      <div class="why-card reveal">
-        <span class="num">02 / COMPLETE</span>
-        <h3>We go beyond admissions</h3>
-        <p>University shortlisting is step one of many. We stay with you through visa approval, arrival, internships and beyond.</p>
+      <div class="wg-item reveal">
+        <h4>Globally recognized degrees</h4>
+        <p>German degrees, particularly in engineering, technology, and applied sciences, are respected worldwide and carry strong weight with employers.</p>
       </div>
-      <div class="why-card reveal">
-        <span class="num">03 / HONEST</span>
-        <h3>We say what others won't</h3>
-        <p>If a university, course, or city isn't right for your goals, we'll tell you, even if it means a shorter conversation. For us, transparency is not just a slogan.</p>
+      <div class="wg-item reveal">
+        <h4>18-month post-study work permit</h4>
+        <p>Graduates get an 18-month window to find a job related to their qualification, one of the more generous post-study visa policies globally.</p>
       </div>
+      <div class="wg-item reveal">
+        <h4>Strong demand for skilled talent</h4>
+        <p>An aging workforce and a documented shortage of skilled professionals in engineering, IT, and data fields creates real opportunity for graduates.</p>
+      </div>
+      <div class="wg-item reveal">
+        <h4>A genuine path to residency</h4>
+        <p>With the right career trajectory, Germany offers a realistic pathway to permanent residency, not just a temporary study experience.</p>
+      </div>
+      <div class="wg-item reveal">
+        <h4>Central location, high quality of life</h4>
+        <p>Access to the rest of Europe, strong infrastructure, safety, and a high standard of living for students and professionals alike.</p>
+      </div>
+    </div>
+
+    <div class="honest-box reveal">
+      <span class="eyebrow">The honest part</span>
+      <h3>What most consultants won't tell you</h3>
+      <ul>
+        <li>German bureaucracy is real, and it moves slower than you'll expect. Plan for it.</li>
+        <li>Public university applications are highly competitive for popular courses (especially CS and Data Science). Profile strength matters.</li>
+        <li>Finding your first job without at least basic German (A2–B1) is significantly harder outside pure tech roles.</li>
+        <li>Cost of living varies dramatically by city: Munich and Frankfurt are very different from Leipzig or Dresden.</li>
+        <li>Accommodation, not admission, is often the hardest part of the entire journey. Start early.</li>
+      </ul>
+      <p class="note">We tell you this not to discourage you, but because knowing it in advance is what makes the difference between a smooth relocation and a stressful one.</p>
     </div>
   </div>
 </section>
@@ -1126,110 +1087,6 @@ footer{
         </ul>
         <div class="best-for">Best for: students building a network early</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= WHY GERMANY ================= -->
-<section id="why-germany" class="section-pad on-dim">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Why Germany?</span>
-      <h2>Why thousands of Indian students choose Germany, and why I did too.</h2>
-      <p>Germany offers one of the strongest study-to-career pathways in the world. Here's an honest look at what makes it worth considering, and what to actually plan for.</p>
-    </div>
-
-    <div class="wg-grid">
-      <div class="wg-item reveal">
-        <h4>Low to no tuition fees</h4>
-        <p>Most public universities charge little to no tuition, even for international students, a major advantage over the US, UK, or Australia.</p>
-      </div>
-      <div class="wg-item reveal">
-        <h4>Globally recognized degrees</h4>
-        <p>German degrees, particularly in engineering, technology, and applied sciences, are respected worldwide and carry strong weight with employers.</p>
-      </div>
-      <div class="wg-item reveal">
-        <h4>18-month post-study work permit</h4>
-        <p>Graduates get an 18-month window to find a job related to their qualification, one of the more generous post-study visa policies globally.</p>
-      </div>
-      <div class="wg-item reveal">
-        <h4>Strong demand for skilled talent</h4>
-        <p>An aging workforce and a documented shortage of skilled professionals in engineering, IT, and data fields creates real opportunity for graduates.</p>
-      </div>
-      <div class="wg-item reveal">
-        <h4>A genuine path to residency</h4>
-        <p>With the right career trajectory, Germany offers a realistic pathway to permanent residency, not just a temporary study experience.</p>
-      </div>
-      <div class="wg-item reveal">
-        <h4>Central location, high quality of life</h4>
-        <p>Access to the rest of Europe, strong infrastructure, safety, and a high standard of living for students and professionals alike.</p>
-      </div>
-    </div>
-
-    <div class="honest-box reveal">
-      <span class="eyebrow">The honest part</span>
-      <h3>What most consultants won't tell you</h3>
-      <ul>
-        <li>German bureaucracy is real, and it moves slower than you'll expect. Plan for it.</li>
-        <li>Public university applications are highly competitive for popular courses (especially CS and Data Science). Profile strength matters.</li>
-        <li>Finding your first job without at least basic German (A2–B1) is significantly harder outside pure tech roles.</li>
-        <li>Cost of living varies dramatically by city: Munich and Frankfurt are very different from Leipzig or Dresden.</li>
-        <li>Accommodation, not admission, is often the hardest part of the entire journey. Start early.</li>
-      </ul>
-      <p class="note">We tell you this not to discourage you, but because knowing it in advance is what makes the difference between a smooth relocation and a stressful one.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FAQ ================= -->
-<section id="faq" class="section-pad">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">FAQs</span>
-      <h2>Straight answers to the questions we hear most.</h2>
-    </div>
-
-    <div class="faq-list reveal">
-      <details class="faq-item" open>
-        <summary><span><span class="q-num">Q1</span>Is BeyondBordersDE a traditional study abroad consultancy?</span><span class="plus">+</span></summary>
-        <p class="a">No. Traditional consultants typically stop supporting students after the visa is approved. We provide guidance across the entire journey: university selection, admissions, visa, relocation, internships, and full-time employment.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q2</span>Who is behind BeyondBordersDE?</span><span class="plus">+</span></summary>
-        <p class="a">The platform is founded and personally run by someone who completed both a Bachelor's and Master's degree in Germany and currently works full-time there, meaning the guidance comes from direct, recent experience, not secondhand research.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q3</span>Do I need to know German before applying?</span><span class="plus">+</span></summary>
-        <p class="a">Not necessarily for admission. Many Master's programs are taught in English. However, basic German (A1–A2) significantly improves your daily life, part-time job prospects, and long-term career opportunities, which is why we offer language guidance as part of our services.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q4</span>Can you guarantee admission to a specific university?</span><span class="plus">+</span></summary>
-        <p class="a">No ethical consultant can guarantee admission, and we won't pretend otherwise. What we guarantee is a well-prepared, competitive application built around an honest assessment of your profile.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q5</span>Do you only work with Engineering and IT students?</span><span class="plus">+</span></summary>
-        <p class="a">These are our primary focus areas given the founder's background and Germany's strong demand in these fields, but we also support students in related technical and applied fields. Book a career assessment to check fit.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q6</span>What is APS, and why does it matter?</span><span class="plus">+</span></summary>
-        <p class="a">APS (Akademische Prüfstelle) is a mandatory certification process for Indian students verifying the authenticity of academic documents before a German student visa can be issued. We provide step-by-step guidance through this process.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q7</span>How early should I start the process?</span><span class="plus">+</span></summary>
-        <p class="a">Ideally 10–12 months before your intended intake, to allow sufficient time for university applications, APS certification, visa processing, and accommodation search.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q8</span>Do you help with jobs after graduation, not just during studies?</span><span class="plus">+</span></summary>
-        <p class="a">Yes, full-time job preparation and career coaching are core parts of our service, not an afterthought. This is one of the main ways we differ from traditional consultants.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q9</span>Is this service only for students who haven't applied yet?</span><span class="plus">+</span></summary>
-        <p class="a">No. We also work with students who already have an offer and need help with visa, relocation, or career support, as well as students already in Germany looking for internship or job guidance.</p>
-      </details>
-      <details class="faq-item">
-        <summary><span><span class="q-num">Q10</span>How do I get started?</span><span class="plus">+</span></summary>
-        <p class="a">Book a free initial career assessment. We'll evaluate your profile and recommend a clear next step, no pressure, no obligation.</p>
-      </details>
     </div>
   </div>
 </section>
